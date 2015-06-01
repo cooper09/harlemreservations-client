@@ -13,7 +13,19 @@
         <!-- JQUERY UI components -->
         <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
          <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
+        <!-- google map -->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load("maps", "3.4", {
+                other_params: "sensor=false&language=fr"
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery.googlemap.js"></script>
+         <style>
+            .ui-accordion .ui-accordion-content {
+                padding: 0px;
+            }
+        </style>
   </head>
 <body>
         <!-- triton accordion -->
@@ -35,14 +47,14 @@
         </section>
     </li>
     <li>
+       
         <header class="accordion-header" data-accordion-header>
             <h6>Locations</h6>
         </header>
         <section class="accordion-section" data-accordion-section>
             <div class="accordion-body">
-                <p>Phasellus viverra convallis ex sit amet convallis. Sed accumsan dignissim massa, eu volutpat tellus semper at. Quisque non lectus sit amet lectus consectetur tincidunt nec in sem. Fusce lobortis blandit turpis, vel vestibulum nulla egestas vitae. Vivamus quis orci vitae odio elementum facilisis. Vestibulum suscipit quam in dictum ullamcorper. Sed lectus quam, faucibus id pellentesque nec, suscipit at elit. </p>
-
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fermentum congue lectus, at imperdiet odio dictum sit amet.</p>
+                <div id="map" style="width: 400px; height: 300px;"></div>
+                
             </div>
         </section>
     </li>
@@ -68,13 +80,27 @@
         </header>
         <section class="accordion-section" data-accordion-section>
             <div class="accordion-body">
-                <p>Sed non sem tempor, feugiat risus at, dignissim ipsum. Ut efficitur lacus non sem laoreet tincidunt. Proin porttitor placerat massa, eu varius libero elementum ac. Donec a ligula ullamcorper, pulvinar leo vel, vestibulum magna. Aliquam et tempus tortor.</p>
+                 <form class="form--horizontal">
+                <ul class="fields">
+                    <!-- Inputs -->
+                        <label class="field-label" for="username">Username</label>
+                        <input class="input" type="text" name="username">
+                        <label class="field-label" for="email">Email</label>
+                        <input class="input" type="email" name="email">
 
-                <ul>
-                    <li>Nulla leo nulla, porta in tortor in.</li>
-                    <li>Cras sed finibus felis.</li>
-                    <li>Nulla purus turpis, lobortis at viverra id.</li>
+                        <!-- Selects -->
+                        <label class="field-label" for="country">Country</label>
+                        <select class="input" name="country"></select>
+
+                        <!-- Textareas -->
+                        <label class="field-label" for="username">Comments</label>
+                        <textarea class="input" rows="5" cols="50" name="comments"></textarea>
+
+                    <li class="form-actions">
+                        <button type="submit" class="button">Save</button>
+                    </li>
                 </ul>
+            </form>
             </div>
         </section>
     </li>
@@ -101,7 +127,6 @@
         //main accordion - simplets nav with relying on a menu
             $('#accordion').accordion({
                 collapsible: true, 
-                calculate: true,
                 defaultIndex: 10
             });
         //pin header to top of the window
@@ -116,6 +141,15 @@
         //jquery calendar/data picker 
             $('#datepicker-2').datepicker();
             $('#datepicker-3').datepicker();
+        
+        //google map
+        $("#map").googleMap({
+                      zoom: 14, // Initial zoom level (optional)
+                      coords: [40.81138240, -73.94479939999997], // Map center (optional)
+                      type: "ROADMAP" // Map type (optional)
+                    });
+
+
         });//end document ready
          
     </script>

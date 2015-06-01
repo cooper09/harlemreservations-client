@@ -1,9 +1,14 @@
 body {
-	background: pink;
+	background: url(../bg.jpg);
 	padding: 1em;
 }
+#header {
+	font-size: 2em;
+	margin-bottom: 1em;
+	color: #f00;
+	drop-shadow: 10px 10px 5px #888888;
+}
 .accordion-header {
-	background: blue;
 	margin:1em;
 	background: #d1d1d1;
 	
@@ -23,6 +28,9 @@ body {
 	margin-right: 2em;
 }
 
+.form--horizontal .field-label {
+	text-align: left;
+}
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	.date-accordion {
