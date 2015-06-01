@@ -1,0 +1,31 @@
+body {
+	background: pink;
+	padding: 1em;
+}
+.accordion-header {
+	background: blue;
+	margin:1em;
+	background: #d1d1d1;
+	
+}
+.button {
+	 box-shadow: 10px 10px 5px #888888;
+}
+.date-accordion {
+	height: 300px;
+}
+.arrive {
+	float: left;
+	margin-right: 2em;
+}
+.departure {
+	float: left;
+	margin-right: 2em;
+}
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	.date-accordion {
+		height: 1000px;
+	}	
+}
