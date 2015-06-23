@@ -31,7 +31,20 @@
         <!-- triton accordion -->
 <div id="header">Harlem Reservations</div>
 <ul class="accordion" id="accordion">
+   
     <li>
+       
+        <header class="accordion-header" data-accordion-header>
+            <h6>Locations</h6>
+        </header>
+        <section class="accordion-section" data-accordion-section>
+            <div class="accordion-body">
+                <div id="map" style="width: 400px; height: 300px;"></div>
+                
+            </div>
+        </section>
+    </li>
+     <li>
         <header class="accordion-header" data-accordion-header>
             <h6>Reservations</h6>
         </header>
@@ -44,18 +57,6 @@
             </div>
 
              <button type="button" class="button js-tooltip" data-tooltip="click to finaizee your reservation!.">Reserve</button>
-        </section>
-    </li>
-    <li>
-       
-        <header class="accordion-header" data-accordion-header>
-            <h6>Locations</h6>
-        </header>
-        <section class="accordion-section" data-accordion-section>
-            <div class="accordion-body">
-                <div id="map" style="width: 400px; height: 300px;"></div>
-                
-            </div>
         </section>
     </li>
     <li>
@@ -93,8 +94,7 @@
                         <select class="input" name="country"></select>
 
                         <!-- Textareas -->
-                        <label class="field-label" for="username">Comments</label>
-                        <textarea class="input" rows="5" cols="50" name="comments"></textarea>
+                    
 
                     <li class="form-actions">
                         <button type="submit" class="button">Save</button>

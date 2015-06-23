@@ -1,0 +1,13 @@
+body {
+	background: pink;
+	padding: 1em;
+}
+.accordion-header {
+	background: blue;
+	margin:1em;
+	background: #d1d1d1;
+	
+}
+.button {
+	 box-shadow: 10px 10px 5px #888888;
+}

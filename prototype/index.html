@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Titon Toolkit - TEST</title>
+         <!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/toolkit.min.js"></script>
+        <link href="css/toolkit.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- triton accordion -->
+        <ul class="accordion" id="accordion" data-accordion>
+    <li>
+        <header class="accordion-header" data-accordion-header>
+            <h6>Section 1</h6>
+        </header>
+        <section class="accordion-section" data-accordion-section>
+            <div class="accordion-body">
+                <div class="carousel" data-carousel>
+                    <div class="carousel-items">
+                        <ul data-carousel-items>
+                            <li><img src="http://placehold.it/1200x900/4c6278/ffffff&text=4:3" alt=""></li>
+                            <li><img src="http://placehold.it/1200x900/42586e/ffffff&text=4:3" alt=""></li>
+                            <li><img src="http://placehold.it/1200x900/344a5f/ffffff&text=4:3" alt=""></li>
+                            <li><img src="http://placehold.it/1200x900/293f54/ffffff&text=4:3" alt=""></li>
+                            <li><img src="http://placehold.it/1200x900/283442/ffffff&text=4:3" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <div class="carousel-tabs">
+                        <ol class="bullets" data-carousel-tabs>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ol>
+                    </div>
+
+                    <a href="javascript:;" class="carousel-prev" data-carousel-prev></a>
+                    <a href="javascript:;" class="carousel-next" data-carousel-next></a>
+                </div>
+
+                <script>
+                    $(function() {
+                        $('.carousel').carousel({
+                            animation: 'slide-up'
+                        });
+                    });
+                </script>
+            </div>
+        </section>
+    </li>
+    <li>
+        <header class="accordion-header" data-accordion-header>
+            <h6>Section 2</h6>
+        </header>
+        <section class="accordion-section" data-accordion-section>
+            <div class="accordion-body">
+                <p>Phasellus viverra convallis ex sit amet convallis. Sed accumsan dignissim massa, eu volutpat tellus semper at. Quisque non lectus sit amet lectus consectetur tincidunt nec in sem. Fusce lobortis blandit turpis, vel vestibulum nulla egestas vitae. Vivamus quis orci vitae odio elementum facilisis. Vestibulum suscipit quam in dictum ullamcorper. Sed lectus quam, faucibus id pellentesque nec, suscipit at elit. </p>
+
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fermentum congue lectus, at imperdiet odio dictum sit amet.</p>
+            </div>
+        </section>
+    </li>
+    <li>
+        <header class="accordion-header" data-accordion-header>
+            <h6>Section 3</h6>
+        </header>
+        <section class="accordion-section" data-accordion-section>
+            <div class="accordion-body">
+                <p>Sed non sem tempor, feugiat risus at, dignissim ipsum. Ut efficitur lacus non sem laoreet tincidunt. Proin porttitor placerat massa, eu varius libero elementum ac. Donec a ligula ullamcorper, pulvinar leo vel, vestibulum magna. Aliquam et tempus tortor.</p>
+
+                <ul>
+                    <li>Nulla leo nulla, porta in tortor in.</li>
+                    <li>Cras sed finibus felis.</li>
+                    <li>Nulla purus turpis, lobortis at viverra id.</li>
+                </ul>
+            </div>
+        </section>
+    </li>
+</ul>
+
+<script>
+    $(function() {
+        $('#accordion').accordion({
+            collapsible: true
+        });
+    });
+</script>
+
+
+        <!-- triton button -->
+        <button type="button" class="button js-tooltip" data-tooltip="click me you low life!.">Click Me!</button>
+
+            <script>
+                $(function() {
+                    $('.js-tooltip').tooltip();
+                });
+            </script>
+    </body>
+</html>
