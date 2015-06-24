@@ -22,23 +22,8 @@
             <div class="accordion-body">
                 <div class="carousel" data-carousel>
                     <div class="carousel-items">
-                        <ul data-carousel-items>
-                            <li><img src="http://placehold.it/1200x900/4c6278/ffffff&text=Item 1" alt="">
-                                 <p>Generic Text</p>
-                            </li>
-                            <li><img src="http://placehold.it/1200x900/42586e/ffffff&text=Item 2" alt="">
-                                <p>Generic Text</p>
-                            </li>
-                            <li><img src="http://placehold.it/1200x900/344a5f/ffffff&text=Item 3" alt="">
-                                <p>Generic Text</p>
-                            </li>
-                            <li><img src="http://placehold.it/1200x900/293f54/ffffff&text=Item 4" alt="">
-                                <p>Generic Text</p>
-                            </li>
-                            <li><img src="http://placehold.it/1200x900/283442/ffffff&text=Item 5" alt="">
-                                <p>Generic Text</p>
-                            </li>
-                        </ul>
+                        
+                        images go here...
                     </div>
 
                     <div class="carousel-tabs">
@@ -53,17 +38,8 @@
 
                     <a href="javascript:;" class="carousel-prev" data-carousel-prev></a>
                     <a href="javascript:;" class="carousel-next" data-carousel-next></a>
-                </div>
-
-                <script>
-                    $(function() {
-                        $('.carousel').carousel({
-                            infinite: true,
-                            loop: true
-                        });
-                    });
-                </script>
-            </div>
+                </div><!-- end carousel -->
+            </div><!-- end accordion -->
         </section>
     </li>
     <li>
@@ -114,4 +90,45 @@
                 });
             </script>
     </body>
+<script>
+    $(document).ready( function() {
+
+        var localData = [{
+            "imageid": "1",
+            "image": "images/image1.jpg",
+            "description": "123 4th street"
+        },
+        {
+            "imageid": "2",
+            "image": "images/image2.jpg",
+            "description": "456 7th street"
+        },
+        {
+            "imageid": "3",
+            "image": "images/image3.jpg",
+            "description": "456 7th street"
+        },
+        {
+            "imageid": "4",
+            "image": "images/image4.jpg",
+            "description": "141 west 121st street"
+        }]
+
+        console.log("local data: " , localData);
+
+         var obj = localData,  // get entry object (array) from JSON data
+                        ul = $("<ul data-carousel-items>");                    // create a new ul element
+                    // iterate over the array and build the list
+        for (var i = 0, l = obj.length; i < l; ++i) {
+                        ul.append("<li><img src='" + obj[i].image + "'>" + obj[i].description + "</li>");
+                    }
+        $(".carousel-items").append(ul);    // add the list to the DOM
+
+        $('.carousel').carousel({
+                            infinite: true,
+                            loop: true
+                        });
+    });//end document ready
+</script>
+
 </html>
