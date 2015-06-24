@@ -23,11 +23,21 @@
                 <div class="carousel" data-carousel>
                     <div class="carousel-items">
                         <ul data-carousel-items>
-                            <li><img src="http://placehold.it/1200x900/4c6278/ffffff&text=4:3" alt=""></li>
-                            <li><img src="http://placehold.it/1200x900/42586e/ffffff&text=4:3" alt=""></li>
-                            <li><img src="http://placehold.it/1200x900/344a5f/ffffff&text=4:3" alt=""></li>
-                            <li><img src="http://placehold.it/1200x900/293f54/ffffff&text=4:3" alt=""></li>
-                            <li><img src="http://placehold.it/1200x900/283442/ffffff&text=4:3" alt=""></li>
+                            <li><img src="http://placehold.it/1200x900/4c6278/ffffff&text=Item 1" alt="">
+                                 <p>Generic Text</p>
+                            </li>
+                            <li><img src="http://placehold.it/1200x900/42586e/ffffff&text=Item 2" alt="">
+                                <p>Generic Text</p>
+                            </li>
+                            <li><img src="http://placehold.it/1200x900/344a5f/ffffff&text=Item 3" alt="">
+                                <p>Generic Text</p>
+                            </li>
+                            <li><img src="http://placehold.it/1200x900/293f54/ffffff&text=Item 4" alt="">
+                                <p>Generic Text</p>
+                            </li>
+                            <li><img src="http://placehold.it/1200x900/283442/ffffff&text=Item 5" alt="">
+                                <p>Generic Text</p>
+                            </li>
                         </ul>
                     </div>
 
@@ -48,7 +58,8 @@
                 <script>
                     $(function() {
                         $('.carousel').carousel({
-                            animation: 'slide-up'
+                            infinite: true,
+                            loop: true
                         });
                     });
                 </script>
