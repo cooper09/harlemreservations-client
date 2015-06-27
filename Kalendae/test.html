@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
+<!-- <script src="src/moment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="build/kalendae.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="build/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background:red;
+		}
+	</style>
+	<script src="moment.js"></script>
+	<script>
+	    moment().format();
+	</script>
+</head>
+<body>
+	<div #="myDiv">my div</div>
+	<h1>Kalendae</h1>
+	<p>Single Select</p>
+	<script type="text/javascript" charset="utf-8">
+
+		var chosenDate;
+
+		var day = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+		alert("the DAY: " + day )
+
+	/*	var k = new Kalendae(document.body, {
+			months:1,
+			mode:'single',
+			selected:Kalendae.moment().subtract({6/30/2015})
+		}); */
+
+		var k = new Kalendae(document.body, {
+			months:1,
+			mode:'single',
+			//selected:Kalendae.moment('20150630', 'YYYYMMDD'), 
+			blackout:Kalendae.moment('20150630', 'YYYYMMDD')
+		});
+
+			k.subscribe('date-clicked', function (date) {
+			  
+			   chosenDate = this.getSelected();
+			   alert(date, chosenDate );
+
+			   this.setSelected(day);
+			});
+	</script>
+
+</body>
+</html>
